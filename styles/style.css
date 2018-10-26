@@ -1,50 +1,41 @@
-﻿.main-container{
-    background-image: url("../Img/world-map.png");
-    height: 1000px;
-    width: 100%;
-    background-size: cover;
-    background-position: top;
-    overflow-x: hidden;
+﻿body{
+    background-image:url("../Img/space.jpg");
 }
-.head{
-    letter-spacing: 4px;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-align: center;
+.sun{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: orange;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
 }
-.sub-head{
-    letter-spacing: 2px;
-    font-family: cursive;
-    text-align: center;
-    font-style: italic;
-    font-weight: normal;
+.mars-orbit{
+    border: solid white 4px;
+    position: fixed;
+    top: 6%;
+    left: 29.5%;
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    animation: orbit 5s linear infinite;
 }
-.main-list{
-    text-align: center;
-    font-style: italic;
-    list-style: none;
+.mars{
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0,5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
-
-a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
+@keyframes orbit {
+    100%{transform: rotate(360deg);}
 }
-
-a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
+@keyframes scale {
+    100%{transform: scale(1.2, 1.2);}
 }
-
-a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-}
+div>div:hover{animation: scale 500ms infinite}
+div:first-child:hover{animation: scale 500ms infinite}
