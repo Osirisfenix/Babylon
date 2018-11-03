@@ -1,0 +1,72 @@
+﻿nav{
+    padding: 15px 10px;
+    display: flex;
+    background-color: #1b29ff;
+}
+#sign-in{
+    margin: 0 0 0 auto;
+}
+button{
+    height: 30px;
+    margin-right: 10px;
+    background-color: #ff3333;
+    color: #ffffff;
+    padding: 2px 4px;
+    border: 0;
+}
+.event-container{
+    display: flex;
+    flex-direction: row;
+    padding: 4px 5px;
+}
+.desc{
+    flex-grow: 1;
+    background-color: #c8c8c8;
+}
+.content{
+    flex: 0 0 200px;
+    background-color: #e0e0e0;
+}
+.jobs-container{
+    display: flex;
+    flex-direction: row;
+    padding: 4px 5px;
+    color: white;
+    justify-content: space-between;
+}
+.title{
+    padding: 20px 0;
+    background-color: #ff1312;
+    flex: 0 0 200px;
+    margin-right: 25px;
+
+}
+.content-else{
+    padding: 20px 0;
+    background-color: orange;
+    display: flex;
+}
+.texting{
+    padding-left: 20px;
+}
+.apply-button{
+    display: flex;
+    flex-direction: column-reverse;
+}
+@media (max-width: 900px){
+    h3{
+        text-align: center;
+    }
+    .jobs-container{
+        flex-wrap: wrap;
+    }
+    .title{
+        flex: 0 0 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .event-container{
+        flex-wrap: wrap;
+    }
+}
