@@ -1,41 +1,52 @@
 ﻿body{
     background-image:url("../Img/space.jpg");
+    overflow: hidden;
+}
+.mars-orbit{
+    margin: 30px auto;
+    height: 500px;
+    max-width: 500px;
+    border-radius: 50%;
+    border: 7px solid white;
+    animation-duration: 6s;
+    animation-name: gravity;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.mars-orbit:hover{
+    animation-play-state: paused;
 }
 .sun{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 230px;
+    left: 46%;
     background-color: orange;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
 }
-.mars-orbit{
-    border: solid white 4px;
-    position: fixed;
-    top: 6%;
-    left: 29.5%;
-    height: 550px;
-    width: 550px;
-    border-radius: 50%;
-    animation: orbit 5s linear infinite;
+.sun:hover{
+    animation-play-state: running;
+    transform: scale(1.2);
 }
 .mars{
     background-color: red;
-    height: 70px;
-    width: 70px;
+    left: 100px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
+    box-sizing: border-box;
     position: absolute;
-    top: 0,5%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
-@keyframes orbit {
-    100%{transform: rotate(360deg);}
+.mars:hover{
+    transform: scale(1.2);
 }
-@keyframes scale {
-    100%{transform: scale(1.2, 1.2);}
+@keyframes gravity {
+    from{ transform: rotate(0deg);
+
+    } to {
+        transform: rotate(360deg);
+          }
 }
-div>div:hover{animation: scale 500ms infinite}
-div:first-child:hover{animation: scale 500ms infinite}
+
+
