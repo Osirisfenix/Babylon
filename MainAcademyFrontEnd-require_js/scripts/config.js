@@ -1,0 +1,10 @@
+requirejs.config({
+    baseURL:'scripts',
+    paths:{
+        jquery:'libs/jquery-3.3.1',
+        mymethods:'myScripts/myMethods',
+        coolmet:'myScripts/coolMethods',
+        awemeth:'myScripts/awesomeMethods'
+    }
+});
+ requirejs(["myScripts/app"]);
